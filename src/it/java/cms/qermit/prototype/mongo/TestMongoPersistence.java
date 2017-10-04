@@ -23,7 +23,6 @@ public class TestMongoPersistence {
 
     private static final Logger logger = LoggerFactory.getLogger(TestMongoPersistence.class);
 
-
     @Before
     public void reset() {
         logger.info("Deleting all tokens");
@@ -36,6 +35,6 @@ public class TestMongoPersistence {
         final String value = UUID.randomUUID().toString();
         logger.info("Persisting token with ID: {}", id);
         tokenRepository.save(new Token(id, value, System.currentTimeMillis() + 1000));
-        tokenRepository.findAll().forEach(t -> logger.info("Found: {}", t.getId()));
+        tokenRepository.findAll().forEach(t -> logger.info("Found: {}", t));
     }
 }

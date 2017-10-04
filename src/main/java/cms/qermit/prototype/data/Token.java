@@ -1,5 +1,6 @@
 package cms.qermit.prototype.data;
 
+import com.google.common.base.MoreObjects;
 import org.springframework.data.annotation.Id;
 
 public class Token {
@@ -10,7 +11,6 @@ public class Token {
     private long expiryDate;
 
     protected Token() {
-
     }
 
     public Token(final String id, final String value, final long expiryDate) {
@@ -43,4 +43,12 @@ public class Token {
         this.expiryDate = expiryDate;
     }
 
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("id", id)
+                .add("value", "****")
+                .add("expiryDate", expiryDate)
+                .toString();
+    }
 }
