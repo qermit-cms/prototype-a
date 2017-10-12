@@ -1,4 +1,4 @@
-package cms.qermit.prototype.mongo;
+package cms.qermit.prototype.repository;
 
 import cms.qermit.prototype.data.Token;
 import org.junit.Before;
@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.UUID;
@@ -16,6 +17,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = DEFINED_PORT)
+@ActiveProfiles("test")
 public class TestMongoPersistence {
 
     @Autowired

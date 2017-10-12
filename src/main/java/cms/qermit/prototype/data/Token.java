@@ -1,13 +1,22 @@
 package cms.qermit.prototype.data;
 
 import com.google.common.base.MoreObjects;
-import org.springframework.data.annotation.Id;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "token")
 public class Token {
 
     @Id
+    @Column(name = "id")
     private String id;
+    @Column(name = "value")
     private String value;
+    @Column(name = "expiry_date")
     private long expiryDate;
 
     protected Token() {
