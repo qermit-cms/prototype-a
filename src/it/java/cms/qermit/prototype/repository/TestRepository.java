@@ -18,25 +18,29 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = DEFINED_PORT)
 @ActiveProfiles("test")
-public class TestMongoPersistence {
+public class TestRepository {
 
     @Autowired
     private TokenRepository tokenRepository;
 
-    private static final Logger logger = LoggerFactory.getLogger(TestMongoPersistence.class);
+    private static final Logger logger = LoggerFactory.getLogger(TestRepository.class);
 
     @Before
     public void reset() {
-        logger.info("Deleting all tokens");
+        logger.debug("Resetting - deleting {} tokens", tokenRepository.count());
         tokenRepository.deleteAll();
     }
 
     @Test
     public void testPersistAndLoadData() {
-        final String id = UUID.randomUUID().toString();
-        final String value = UUID.randomUUID().toString();
-        logger.info("Persisting token with ID: {}", id);
-        tokenRepository.save(new Token(id, value, System.currentTimeMillis() + 1000));
-        tokenRepository.findAll().forEach(t -> logger.info("Found: {}", t));
+        for (int i = 0; i < 10; i++) {
+            final String id = UUID.randomUUID().toString();
+            final String value = UUID.randomUUID().toString();
+            logger.debug("Persisting token with ID: {}", id);
+            tokenRepository.save(new Token(id, value, System.currentTimeMillis() + 1000));
+            tokenRepository.findAll().forEach(t -> logger.debug("Found: {}", t));
+            reset();
+        }
     }
+
 }
