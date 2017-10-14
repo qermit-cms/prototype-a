@@ -7,7 +7,8 @@ Example app for trying out new Spring Boot features.
 
 ## Notable Libraries
 
-* HikariCP database connection pool - configured using regular Spring Boot datasource properties
+* HikariCP database connection pool - configured using regular Spring Boot datasource properties.
+  (Tomcat JDBC Pool excluded)
 
 * Flyway Migrations - Y can use separate credentials for DDL/schema changes by using the spring.flyway.* properties (separate datasource)
   
