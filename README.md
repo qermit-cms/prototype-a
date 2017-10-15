@@ -7,9 +7,7 @@ Example app for trying out new Spring Boot features.
 
 ## Notable Libraries
 
-* HikariCP database connection pool - configured using regular Spring Boot datasource properties.
-  (Tomcat JDBC Pool excluded)
-
-* Flyway Migrations - You can use separate credentials for DDL/schema changes by using the spring.flyway.* properties (separate datasource)
+* Flyway Migrations - Separate credentials/datasource for schema changes by configuring spring.flyway.*
   
-* git-commit-id-plugin - Branch, commit ID and version baked into application properties and logged by banner.txt
+* git-commit-id-plugin - git.properties Maven filtered into banner.txt
+
