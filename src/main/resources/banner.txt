@@ -5,9 +5,13 @@
   /  \__    __    __/  \__/  \__/  \__/  \__/  \__/  \
   \__/  \__/  \__/  \__/  \__/  \__/  \__/  \__/  \__/
 
-     @project.name@    :   @project.version@
-     Commit         :   @git.commit.id.describe-short@ - @git.branch@
-     Spring Boot    :   v${spring-boot.version}
+    @project.name@      :    @project.version@
+
+    Spring Boot      :    v${spring-boot.version}
+
+    Commit  ID       :    @git.commit.id.describe-short@ - @git.branch@
+            Build    :    @git.build.time@
+            Commit   :    @git.commit.time@
    __    __    __    __    __    __    __    __    __
   /  \__/  \__/  \__/  \__/  \__/  \__/  \__/  \__/  \
   \__/  \__/  \__/  \__/  \__/  \__/  \__/  \__/  \__/
