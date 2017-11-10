@@ -9,6 +9,7 @@
     @project.name@       :    @project.version@
 
     Spring Boot       :    v${spring-boot.version}
+    Spring Framework  :    v@spring.version@
 
     Commit  ID        :    @git.commit.id.describe-short@ - @git.branch@
             Build     :    @git.build.time@
