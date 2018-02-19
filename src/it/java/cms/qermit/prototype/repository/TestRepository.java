@@ -27,7 +27,7 @@ public class TestRepository {
 
     @Before
     public void reset() {
-        logger.debug("Resetting - deleting {} tokens", tokenRepository.count());
+        logger.debug("Resetting - deleting {} token(s)", tokenRepository.count());
         tokenRepository.deleteAll();
     }
 
