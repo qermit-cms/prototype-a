@@ -18,12 +18,12 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = DEFINED_PORT)
 @ActiveProfiles("test")
-public class TestRepository {
+public class RepositoryIT {
 
     @Autowired
     private TokenRepository tokenRepository;
 
-    private static final Logger logger = LoggerFactory.getLogger(TestRepository.class);
+    private static final Logger logger = LoggerFactory.getLogger(RepositoryIT.class);
 
     @Before
     public void reset() {
