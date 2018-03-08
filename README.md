@@ -32,3 +32,12 @@ Spring will then pick up the application-dev.properties
 * Flyway Migrations - Separate credentials/datasource for schema changes by configuring spring.flyway.*
   
 * git-commit-id-plugin - git.properties Maven filtered into banner.txt
+
+
+
+# Security during testing
+
+```
+@RunWith(SpringRunner.class)
+Use @WebMvcTest(value = TodoController.class, secure = false)
+```

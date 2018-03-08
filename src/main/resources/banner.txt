@@ -1,4 +1,3 @@
-
       __    __    __    __    __    __    __    __
    __/  \__/  \__/  \__/  \__/  \__/  \__/  \__/  \__
   /  \              /  \__/  \__/  \__/  \__/  \__/  \
@@ -6,7 +5,8 @@
   /  \__    __    __/  \__/  \__/  \__/  \__/  \__/  \
   \__/  \__/  \__/  \__/  \__/  \__/  \__/  \__/  \__/
 
-    @project.name@       :    @project.version@
+    Module Name       :    @project.name@
+    Version           :    @project.version@
 
     Spring Boot       :    v${spring-boot.version}
     Spring Framework  :    v@spring.version@
